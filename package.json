@@ -1,0 +1,33 @@
+{
+  "name": "Javascript",
+  "version": "1.0.0",
+  "description": "Reference javascript programs",
+  "main": "index.js",
+  "scripts": {
+    "test": "babel-node spec/run.js --exec babel-node --presets es2015,stage-2",
+    "test-init": "node node_modules/jasmine/bin/jasmine init",
+    "start": "babel-node index.js --exec babel-node --presets es2015,stage-2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulnizam/Javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulnizam/Javascript/issues"
+  },
+  "homepage": "https://github.com/abdulnizam/Javascript#readme",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.11.0",
+    "babel-register": "^6.11.6",
+    "express": "^4.16.3"
+  },
+  "dependencies": {
+    "jasmine": "^3.2.0"
+  }
+}
