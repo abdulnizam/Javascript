@@ -2,6 +2,7 @@
 
 class JavascriptLibrary {
 
+	// How do you find the missing number in a given integer array of 1 to 100?
 	// missing number by order
 
 	findMissingNumber( array, count = null)
@@ -24,6 +25,19 @@ class JavascriptLibrary {
 
 		return results;
 	}
+
+	// How do you find the duplicate number on a given integer array?
+
+	findDuplicateNumber( array )
+	{
+
+		// find only duplicate number from the given array
+		let unique = array.filter((value, index, self) => self.indexOf(value) != index);
+
+		return unique;
+
+	}
+
 
 }
 

@@ -18,6 +18,12 @@ function routes( obj ) {
 
 	});
 
+	app.get('/duplicate-number', (req, res) => {
+		
+		res.send( obj.duplicateNumberResults );
+
+	});
+
 	app.listen(2000, (req, res) => {
 
 		console.log('server is running ' );

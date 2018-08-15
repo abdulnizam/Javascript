@@ -10,7 +10,11 @@ const lib = new JavascriptLibrary();
 
 const missingResults = lib.findMissingNumber( [ 1, 3, 6, 7, 10 ] );
 
+// find duplicate number
 
+// @param array = [1,2,3,3,4]
+
+const duplicateNumberResults = lib.findDuplicateNumber( [1,2,3,3,4] );
 
 
 
@@ -19,7 +23,9 @@ const missingResults = lib.findMissingNumber( [ 1, 3, 6, 7, 10 ] );
 
 const resultsObj = {
 
-	missingResults
+	missingResults,
+
+	duplicateNumberResults
 
 };
 

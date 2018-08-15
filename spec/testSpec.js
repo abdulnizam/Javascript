@@ -11,9 +11,15 @@ describe("Javascript Library Program Testing", () => {
 
 	});
 
-	it("Missing Number Test with extra parameter", () => {
+	it("Missing Number Test with extra parameter.", () => {
 
 		expect( [2,3,4,6,7] ).toEqual( lib.findMissingNumber( [1, 5], 7 ) );
+
+	});
+
+	it("Find duplicate number from given array.", () => {
+
+		expect( [4] ).toEqual( lib.findDuplicateNumber( [1, 2, 3, 4, 4, 5] ) );
 
 	});
 
