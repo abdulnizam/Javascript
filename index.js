@@ -15,8 +15,11 @@ const duplicateNumberResults = lib.findDuplicateNumber( [1,2,3,3,4] );
 
 // find largest and smallest from given unsorted array
 // @param array = [2,16,5,6,7,1,10]
-const largestNsmallestResults = lib.findSmallestNSmallestNumber( [2,16,5,6,7,1,10] )
+const largestNsmallestResults = lib.findSmallestNSmallestNumber( [2,16,5,6,7,1,10] );
 
+// find sum of number array from given array
+// @param array = [2, 4, 3, 5, 6, -2, 4, 7, 8, 9]
+const sumOfNumberArrayResults = lib.findSumOfNumberArray( [2, 4, 3, 5, 6, -2, 4, 7, 8, 9], 7 );
 
 // passing results to routes
 
@@ -26,7 +29,9 @@ const resultsObj = {
 
 	duplicateNumberResults,
 
-	largestNsmallestResults
+	largestNsmallestResults,
+
+	sumOfNumberArrayResults
 
 };
 

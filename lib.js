@@ -53,6 +53,28 @@ class JavascriptLibrary {
 
 	}
 
+	findSumOfNumberArray( array, number )
+	{
+		const results = [ ];
+
+		for (let i = 0; i < array.length; i++)
+		{
+			let first = array [i];
+			for (let j = i + 1; j < array.length; j++)
+			{
+				let second = array [j];
+
+				if ((first + second) == number)
+				{
+					results.push( '(' + first + ',' + second +')' );
+				}	
+			}
+		}
+
+		return results;
+
+	}
+
 
 }
 

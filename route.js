@@ -38,9 +38,16 @@ function routes( obj ) {
 
 	});
 
+   	app.get('/sum-array-number', (req, res) => {
+		
+		res.send( obj.sumOfNumberArrayResults );
+
+	});
+
+
 	app.listen(2000, (req, res) => {
 
-		console.log('server is running ' );
+		console.log('server is running ');
 
 	});
 	

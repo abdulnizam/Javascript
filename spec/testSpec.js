@@ -29,5 +29,13 @@ describe("Javascript Library Program Testing", () => {
 
 	});
 
+	it("Find sum of number array from given array.", () => {
+
+		const res = [ "(2,5)", "(4,3)", "(3,4)", "(-2,9)" ];
+
+		expect( res ).toEqual( lib.findSumOfNumberArray( [2, 4, 3, 5, 6, -2, 4, 7, 8, 9], 7 ) );
+
+	});
+
 
 })
