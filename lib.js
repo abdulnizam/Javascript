@@ -38,6 +38,21 @@ class JavascriptLibrary {
 
 	}
 
+	// How do you find the largest and smallest number in an unsorted integer array? 
+
+	findSmallestNSmallestNumber( array )
+	{
+		const results = [ ];
+
+		let sorted = array.sort( (a, b) => a-b );
+
+		results.push( sorted[0] );
+		results.push( sorted[ sorted.length - 1 ] );
+
+		return results;
+
+	}
+
 
 }
 

@@ -24,6 +24,20 @@ function routes( obj ) {
 
 	});
 
+	app.get('/largest-smallest', (req, res) => {
+
+		const results = {
+
+			'largest' : obj.largestNsmallestResults[1],
+
+			'smallest' : obj.largestNsmallestResults[0]
+
+		}
+		
+		res.send( results );
+
+	});
+
 	app.listen(2000, (req, res) => {
 
 		console.log('server is running ' );
@@ -31,6 +45,7 @@ function routes( obj ) {
 	});
 	
 }
+
 
 export default routes;
 

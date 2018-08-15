@@ -23,5 +23,11 @@ describe("Javascript Library Program Testing", () => {
 
 	});
 
+	it("Find largest and smallest number from unsorted given array.", () => {
+
+		expect( [2,10] ).toEqual( lib.findSmallestNSmallestNumber( [10, 2, 3, 4, 4, 5] ) );
+
+	});
+
 
 })
