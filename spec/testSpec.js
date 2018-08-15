@@ -37,5 +37,23 @@ describe("Javascript Library Program Testing", () => {
 
 	});
 
+	it("Find given string is palindrome. false!", () => {
+
+		const res = "abc";
+
+		expect( false ).toEqual( lib.findPalindrome( res ) );
+
+	});
+
+
+	it("Find given string is palindrome. true", () => {
+
+		const res = "aaa";
+
+		expect( true ).toEqual( lib.findPalindrome( res ) );
+
+	});
+
+
 
 })

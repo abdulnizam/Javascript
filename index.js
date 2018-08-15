@@ -21,6 +21,11 @@ const largestNsmallestResults = lib.findSmallestNSmallestNumber( [2,16,5,6,7,1,1
 // @param array = [2, 4, 3, 5, 6, -2, 4, 7, 8, 9]
 const sumOfNumberArrayResults = lib.findSumOfNumberArray( [2, 4, 3, 5, 6, -2, 4, 7, 8, 9], 7 );
 
+// find palindrome from given string
+// @param str = "aaaaaa" or "abc"
+const findPalindromeResults = lib.findPalindrome("aaaaa");
+
+
 // passing results to routes
 
 const resultsObj = {
@@ -31,7 +36,9 @@ const resultsObj = {
 
 	largestNsmallestResults,
 
-	sumOfNumberArrayResults
+	sumOfNumberArrayResults,
+
+	findPalindromeResults
 
 };
 

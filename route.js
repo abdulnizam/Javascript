@@ -44,6 +44,12 @@ function routes( obj ) {
 
 	});
 
+	app.get('/palindrome', (req, res) => {
+		
+		res.send( obj.findPalindromeResults );
+
+	});
+
 
 	app.listen(2000, (req, res) => {
 
