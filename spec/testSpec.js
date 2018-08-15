@@ -37,7 +37,7 @@ describe("Javascript Library Program Testing", () => {
 
 	});
 
-	it("Find given string is palindrome. false!", () => {
+	it("Find given string is palindrome should return false!", () => {
 
 		const res = "abc";
 
@@ -46,7 +46,7 @@ describe("Javascript Library Program Testing", () => {
 	});
 
 
-	it("Find given string is palindrome. true", () => {
+	it("Find given string is palindrome should return true", () => {
 
 		const res = "aaa";
 
