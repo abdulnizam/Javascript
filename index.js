@@ -1,4 +1,4 @@
-import JavascriptLibrary from './lib';
+import JavascriptLibrary from './lib/lib';
 import routes from './route';
 
 const lib = new JavascriptLibrary();

@@ -1,6 +1,10 @@
-import JavascriptLibrary from '../lib';
+import JavascriptLibrary from '../lib/lib';
+import Stack from '../lib/stack';
+import mSet from '../lib/set';
 
 const lib = new JavascriptLibrary();
+const stack = new Stack();
+const mset = new mSet();
 
 
 describe("Javascript Library Program Testing", () => {
@@ -53,6 +57,76 @@ describe("Javascript Library Program Testing", () => {
 		expect( true ).toEqual( lib.findPalindrome( res ) );
 
 	});
+
+	it("Find given string is palindrome should return true in normal Javascript", () => {
+
+		const res = "aaa";
+
+		expect( true ).toEqual( lib.findPalindromeNormal( res ) );
+
+	});
+
+	it("Stack Testing one", () => {
+
+		const res = 1;
+		
+
+		stack.push(1);
+		stack.push(2);
+
+		stack.pop();
+
+		const result = stack.peek();
+
+		expect( res ).toEqual( result );
+
+	});
+
+	it("Stack Testing two", () => {
+
+		const res = 4;
+
+
+		stack.push(1);
+		stack.push(2);
+
+		stack.pop();
+		stack.pop();
+
+		stack.push(4);
+		stack.push(5);
+
+		stack.pop();
+
+		const result = stack.peek();
+
+		expect( res ).toEqual( result );
+
+	});
+
+	it("Set Testing one", () => {
+
+		mset.add(1);
+
+		const res = mset.add(1);
+
+		expect( false ).toEqual( res );
+
+	});
+
+	it("Set Testing one", () => {
+
+		mset.add('a');
+
+		mset.add('a');
+
+		const res = mset.values();
+
+		expect( ['a'] ).toEqual( res );
+
+	});
+
+
 
 
 
