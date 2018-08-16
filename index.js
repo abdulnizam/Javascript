@@ -1,3 +1,5 @@
+'use strict';
+
 import JavascriptLibrary from './lib/lib';
 import routes from './route';
 

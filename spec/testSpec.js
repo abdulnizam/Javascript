@@ -1,3 +1,5 @@
+'use strict';
+
 import JavascriptLibrary from '../lib/lib';
 import Stack from '../lib/stack';
 import mSet from '../lib/set';
