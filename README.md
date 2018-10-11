@@ -1,22 +1,7 @@
 # Javascript
-Reference Javascript Programs
 
-Test Drivern Development (TDD)
-JasmineJs - Testing
+1) Javascript-jasmine-code 
+	
+	- All sample algorithm with tdd using jasmine test
 
-ExpressJs
-NodeJs
-Babel - Loader
-
-Es6 - ECMAScript 2015
-
-
-
-Install all NPM modules 
-
-npm install 
-
-
-To test - npm run test
-
-To run - npm run start
+2) React + Redux
