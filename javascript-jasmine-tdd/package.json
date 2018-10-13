@@ -25,7 +25,7 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-stage-2": "^6.11.0",
     "babel-register": "^6.11.6",
-    "express": "^4.16.3"
+    "express": "^4.16.4"
   },
   "dependencies": {
     "jasmine": "^3.2.0"
