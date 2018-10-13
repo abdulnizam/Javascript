@@ -1,3 +1,5 @@
 
 javascript-jasmine-tdd/node_modules/*
 javascript-jasmine-tdd/package-lock.json
+
+react-redux/package-lock.json
