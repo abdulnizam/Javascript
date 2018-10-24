@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BookStore from './components/bookstore'
 import uuid from 'uuid'
+import $ from 'jquery'
 
 class App extends Component {
 
@@ -9,23 +10,26 @@ class App extends Component {
 
     this.state = { 
       bookstore: [
-        {
-          id: uuid.v4(),
-          title: "PHP",
-          category: "Computer"
-        },
-        {
-          id: uuid.v4(),
-          title: "Java",
-          category: "Computer"
-        },
-        {
-          id: uuid.v4(),
-          title: "Physics",
-          category: "Science"
-        }
       ]
     }
+  }
+
+  componentWillMount() {
+    this.initialData()
+  }
+
+  initialData() {
+    $.get({ url: 'http://localhost:8080/book', 
+            dataType: 'json',
+            cache: false,
+            success: function(res) {
+                this.setState({ bookstore: res})
+              }.bind(this),
+            error: function(xhr, status, err) {
+                console.log(err);
+              } 
+            
+            });
   }
 
   handleAddBook(data) {
