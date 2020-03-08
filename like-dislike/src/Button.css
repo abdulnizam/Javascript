@@ -1,0 +1,36 @@
+.like-button {
+	background-color: #ccc;
+	color: white;
+	text-decoration: none;
+	font-size: 1rem;
+	padding: 5px 10px;
+	color: #585858
+}
+
+.liked {
+	font-weight: bold;
+	color: #1565c0;
+}
+
+.likes-counter {
+	color: #585858;
+}
+
+.dislike-button {
+	background-color: #ccc;
+	color: white;
+	text-decoration: none;
+	font-size: 1rem;
+	padding: 5px 10px;
+	color: #585858;
+	margin-left: 20px;
+}
+
+.disliked {
+	font-weight: bold;
+	color: #1565c0;
+}
+
+.dislikes-counter {
+	color: #585858;
+}

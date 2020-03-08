@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.10.1/libexec/bin/yarn.js install
+
+PATH: 
+  /usr/local/share/npm/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/usr/local/share/npm/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Users/abdulnizam/Library/Android/sdk/tools:/Users/abdulnizam/Library/Android/sdk/tools/bin:/Users/abdulnizam/Library/Android/sdk/platform-tools:/Users/abdulnizam/Library/Android/sdk/emulator:/Users/abdulnizam/Library/Android/sdk/tools:/Users/abdulnizam/Library/Android/sdk/tools/bin:/Users/abdulnizam/Library/Android/sdk/platform-tools:/Users/abdulnizam/Library/Android/sdk/emulator
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  10.12.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com registry.yarnpkg.com:443
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:57:26)
+
+npm manifest: 
+  {
+    "dependencies": {
+      "@babel/core": "^7.4.5",
+      "@babel/preset-react": "^7.0.0",
+      "babel": "^6.23.0",
+      "babel-loader": "^8.0.6",
+      "path": "^0.12.7",
+      "react": "^16.8.6",
+      "react-dom": "^16.8.6",
+      "react-redux": "^7.1.0",
+      "redux": "^4.0.1",
+      "webpack": "^4.33.0",
+      "webpack-cli": "^3.3.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
