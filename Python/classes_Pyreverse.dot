@@ -1,0 +1,8 @@
+digraph "classes_Pyreverse" {
+charset="utf-8"
+rankdir=BT
+"0" [label="{Experiment|contents\lname\lratio\l|}", shape="record"];
+"1" [label="{Package|segments\luuid\l|get_content()\l}", shape="record"];
+"2" [label="{Player|segments\luuid\l|}", shape="record"];
+"3" [label="{Segment|experiments\lname\luuid\l|}", shape="record"];
+}

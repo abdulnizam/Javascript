@@ -1,0 +1,19 @@
+graph:{
+  title:"classes_Pyreverse"
+  layoutalgorithm:dfs
+  late_edge_labels:yes
+  port_sharing:no
+  manhattan_edges:yes
+  node: {title:"0"  label:"\fbExperiment\fn\n\f____________\n\f08contents\n\f08name\n\f08ratio\n\f____________"
+  shape:box
+}
+  node: {title:"1"  label:"\fbPackage\fn\n\f_____________\n\f08segments\n\f08uuid\n\f_____________\n\f10get_content()"
+  shape:box
+}
+  node: {title:"2"  label:"\fbPlayer\fn\n\f__________\n\f08segments\n\f08uuid\n\f__________"
+  shape:box
+}
+  node: {title:"3"  label:"\fbSegment\fn\n\f_____________\n\f08experiments\n\f08name\n\f08uuid\n\f_____________"
+  shape:box
+}
+}
