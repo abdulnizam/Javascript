@@ -22,5 +22,5 @@ function remove_duplicateB(arr) {
 
 let a = [1,2,5,2,1,8];
 
-let results = remove_duplicateB(a);
+let results = remove_duplicate(a);
 console.log(results);

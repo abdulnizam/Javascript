@@ -36,7 +36,7 @@ class Anagram {
 
 }
 
-let words = ["dell", "ledl", "abc", "cba"];
+let words = ["ledl", "dell", "cba", "abc"];
 let anagrams = new Anagram(words);
 
 anagrams.selectedList();

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>PDF Highlight Demo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <style>
+    .page {
+      position: relative;
+      margin: 20px auto;
+      width: fit-content;
+    }
+    canvas {
+      border: 1px solid #ccc;
+    }
+    .textLayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: transparent;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .highlight {
+      background-color: yellow;
+      color: black !important;
+    }
+  </style>
+</head>
+<body>
+
+<button id="highlight">Highlight 'Lorem'</button>
+<div id="pdf-container"></div>
+
+<script>
+  const url = 'my-paper.pdf';
+  const pdfjsLib = window['pdfjs-dist/build/pdf'];
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+  const container = document.getElementById('pdf-container');
+  let pdfDoc = null;
+
+  async function renderPDF() {
+    pdfDoc = await pdfjsLib.getDocument(url).promise;
+
+    for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum++) {
+      const page = await pdfDoc.getPage(pageNum);
+      const viewport = page.getViewport({ scale: 1.5 });
+
+      // Create container
+      const pageDiv = document.createElement('div');
+      pageDiv.className = 'page';
+      pageDiv.style.width = `${viewport.width}px`;
+      pageDiv.style.height = `${viewport.height}px`;
+
+      // Canvas rendering
+      const canvas = document.createElement('canvas');
+      const context = canvas.getContext('2d');
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
+
+      await page.render({ canvasContext: context, viewport }).promise;
+
+      // Text layer rendering (✅ FIX: await the promise)
+      const textContent = await page.getTextContent();
+      const textLayerDiv = document.createElement('div');
+      textLayerDiv.className = 'textLayer';
+
+      await pdfjsLib.renderTextLayer({
+        textContent,
+        container: textLayerDiv,
+        viewport,
+        textDivs: [],
+        enhanceTextSelection: true
+      }).promise; // ✅ await is critical here
+
+      // Append to DOM
+      pageDiv.appendChild(canvas);
+      pageDiv.appendChild(textLayerDiv);
+      container.appendChild(pageDiv);
+    }
+  }
+
+  function highlightText(query) {
+    const textDivs = document.querySelectorAll('.textLayer div');
+
+    let firstMatch = null;
+    textDivs.forEach(div => {
+      if (div.textContent.toLowerCase().includes(query.toLowerCase())) {
+        div.classList.add('highlight');
+        if (!firstMatch) firstMatch = div;
+      }
+    });
+
+    if (firstMatch) {
+      firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      alert('Text not found.');
+    }
+  }
+
+  document.getElementById('highlight').onclick = () =>
+    highlightText('Maecenas non');
+
+  renderPDF();
+</script>
+</body>
+</html>
